@@ -1,14 +1,12 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tag: JAVA | Joyee</title><meta name="author" content="Joyee"><meta name="copyright" content="Joyee"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="测试网站">
-<meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tag: JAVA | Joyee</title><meta name="author" content="Joyee"><meta name="copyright" content="Joyee"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Joyee">
 <meta property="og:url" content="https://joyee111.github.io/myblog/tags/JAVA/index.html">
 <meta property="og:site_name" content="Joyee">
-<meta property="og:description" content="测试网站">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://joyee111.github.io/myblog/img/blogger.png">
 <meta property="article:author" content="Joyee">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://joyee111.github.io/myblog/img/blogger.png"><link rel="shortcut icon" href="/myblog/img/blogger.png"><link rel="canonical" href="https://joyee111.github.io/myblog/tags/JAVA/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/myblog/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://joyee111.github.io/myblog/img/blogger.png"><link rel="shortcut icon" href="/myblog/img/blogger.png"><link rel="canonical" href="https://joyee111.github.io/myblog/tags/JAVA/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/myblog/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/myblog/',
   algolia: undefined,
   localSearch: undefined,
@@ -34,7 +32,7 @@
   },
   copyright: undefined,
   lightbox: 'fancybox',
-  Snackbar: undefined,
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#49b1f5","bgDark":"#2c2c2c73","position":"bottom-left"},
   source: {
     jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
     justifiedGallery: {
@@ -55,7 +53,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2021-05-09 23:33:24'
+  postUpdate: '2021-05-10 04:02:23'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -126,8 +124,12 @@
       }
       const t = saveToLocal.get('theme')
     
-          if (t === 'dark') activateDarkMode()
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
           else if (t === 'light') activateLightMode()
+          else activateDarkMode()
         
       const asideStatus = saveToLocal.get('aside-status')
       if (asideStatus !== undefined) {
@@ -137,8 +139,139 @@
           document.documentElement.classList.remove('hide-aside')
         }
       }
-    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/myblog/img/blogger.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/myblog/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/myblog/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/myblog/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/myblog/%E9%9F%B3%E4%B9%90"><i class="fa-fw /music/"></i><span> 0</span></a></li><li><a class="site-page child" href="/myblog/%E7%94%B5%E5%BD%B1"><i class="fa-fw /movies/"></i><span> 1</span></a></li><li><a class="site-page child" href="/myblog/%E7%85%A7%E7%89%87"><i class="fa-fw /Gallery/"></i><span> 2</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/myblog/">Joyee</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/myblog/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/myblog/%E9%9F%B3%E4%B9%90"><i class="fa-fw /music/"></i><span> 0</span></a></li><li><a class="site-page child" href="/myblog/%E7%94%B5%E5%BD%B1"><i class="fa-fw /movies/"></i><span> 1</span></a></li><li><a class="site-page child" href="/myblog/%E7%85%A7%E7%89%87"><i class="fa-fw /Gallery/"></i><span> 2</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">JAVA</h1></div></header><main class="layout" id="content-inner"><div id="tag"><div class="article-sort-title">Tag - JAVA</div><div class="article-sort"><div class="article-sort-item year">2021</div><div class="article-sort-item"><a class="article-sort-item-img" href="/myblog/2021/05/09/synchronized%E5%8E%9F%E7%90%86/" title="synchronized原理"><img src="https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png" alt="synchronized原理" onerror="this.onerror=null;this.src='/myblog/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2021-05-09T14:51:22.000Z" title="Created 2021-05-09 22:51:22">2021-05-09</time></div><a class="article-sort-item-title" href="/myblog/2021/05/09/synchronized%E5%8E%9F%E7%90%86/" title="synchronized原理">synchronized原理</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/myblog/2021/05/09/System-gc-%E5%92%8Cfinalize-%E7%9A%84%E4%BD%BF%E7%94%A8/" title="System.gc()和finalize()的使用"><img src="https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png" alt="System.gc()和finalize()的使用" onerror="this.onerror=null;this.src='/myblog/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2021-05-09T14:40:22.000Z" title="Created 2021-05-09 22:40:22">2021-05-09</time></div><a class="article-sort-item-title" href="/myblog/2021/05/09/System-gc-%E5%92%8Cfinalize-%E7%9A%84%E4%BD%BF%E7%94%A8/" title="System.gc()和finalize()的使用">System.gc()和finalize()的使用</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/myblog/2021/05/09/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/" title="动态代理"><img src="https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png" alt="动态代理" onerror="this.onerror=null;this.src='/myblog/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2021-05-08T21:26:13.000Z" title="Created 2021-05-09 05:26:13">2021-05-09</time></div><a class="article-sort-item-title" href="/myblog/2021/05/09/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/" title="动态代理">动态代理</a></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/myblog/img/blogger.png" onerror="this.onerror=null;this.src='/myblog/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Joyee</div><div class="author-info__description">测试网站</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/myblog/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a></div><div class="card-info-data-item is-center"><a href="/myblog/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/myblog/2021/05/09/ReadWriteLock%E8%AF%BB%E5%86%99%E9%94%81%E7%9A%84%E4%BD%BF%E7%94%A8/" title="ReadWriteLock读写锁的使用"><img src="https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png" onerror="this.onerror=null;this.src='/myblog/img/404.jpg'" alt="ReadWriteLock读写锁的使用"/></a><div class="content"><a class="title" href="/myblog/2021/05/09/ReadWriteLock%E8%AF%BB%E5%86%99%E9%94%81%E7%9A%84%E4%BD%BF%E7%94%A8/" title="ReadWriteLock读写锁的使用">ReadWriteLock读写锁的使用</a><time datetime="2021-05-09T14:56:34.000Z" title="Created 2021-05-09 22:56:34">2021-05-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/myblog/2021/05/09/synchronized%E5%8E%9F%E7%90%86/" title="synchronized原理"><img src="https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png" onerror="this.onerror=null;this.src='/myblog/img/404.jpg'" alt="synchronized原理"/></a><div class="content"><a class="title" href="/myblog/2021/05/09/synchronized%E5%8E%9F%E7%90%86/" title="synchronized原理">synchronized原理</a><time datetime="2021-05-09T14:51:22.000Z" title="Created 2021-05-09 22:51:22">2021-05-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/myblog/2021/05/09/System-gc-%E5%92%8Cfinalize-%E7%9A%84%E4%BD%BF%E7%94%A8/" title="System.gc()和finalize()的使用"><img src="https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png" onerror="this.onerror=null;this.src='/myblog/img/404.jpg'" alt="System.gc()和finalize()的使用"/></a><div class="content"><a class="title" href="/myblog/2021/05/09/System-gc-%E5%92%8Cfinalize-%E7%9A%84%E4%BD%BF%E7%94%A8/" title="System.gc()和finalize()的使用">System.gc()和finalize()的使用</a><time datetime="2021-05-09T14:40:22.000Z" title="Created 2021-05-09 22:40:22">2021-05-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/myblog/2021/05/09/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/" title="动态代理"><img src="https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png" onerror="this.onerror=null;this.src='/myblog/img/404.jpg'" alt="动态代理"/></a><div class="content"><a class="title" href="/myblog/2021/05/09/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/" title="动态代理">动态代理</a><time datetime="2021-05-08T21:26:13.000Z" title="Created 2021-05-09 05:26:13">2021-05-09</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/myblog/tags/JAVA/" style="font-size: 1.1em; color: #999">JAVA</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/myblog/archives/2021/05/"><span class="card-archive-list-date">May 2021</span><span class="card-archive-list-count">4</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">4</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-05-09T15:33:24.925Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Joyee</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/myblog/js/utils.js"></script><script src="/myblog/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/myblog/img/blogger.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/myblog/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/myblog/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/myblog/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/myblog/%E7%94%B5%E5%BD%B1"><i class="fa-fw /movies/"></i><span> 0</span></a></li><li><a class="site-page child" href="/myblog/%E7%85%A7%E7%89%87"><i class="fa-fw /Gallery/"></i><span> 1</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/myblog/">Joyee</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/myblog/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/myblog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/myblog/%E7%94%B5%E5%BD%B1"><i class="fa-fw /movies/"></i><span> 0</span></a></li><li><a class="site-page child" href="/myblog/%E7%85%A7%E7%89%87"><i class="fa-fw /Gallery/"></i><span> 1</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">JAVA</h1></div></header><main class="layout" id="content-inner"><div id="tag"><div class="article-sort-title">Tag - JAVA</div><div class="article-sort"><div class="article-sort-item year">2021</div><div class="article-sort-item"><a class="article-sort-item-img" href="/myblog/2021/05/09/ReadWriteLock%E8%AF%BB%E5%86%99%E9%94%81%E7%9A%84%E4%BD%BF%E7%94%A8/" title="ReadWriteLock读写锁的使用"><img src="https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png" alt="ReadWriteLock读写锁的使用" onerror="this.onerror=null;this.src='/myblog/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2021-05-09T14:56:34.000Z" title="Created 2021-05-09 22:56:34">2021-05-09</time></div><a class="article-sort-item-title" href="/myblog/2021/05/09/ReadWriteLock%E8%AF%BB%E5%86%99%E9%94%81%E7%9A%84%E4%BD%BF%E7%94%A8/" title="ReadWriteLock读写锁的使用">ReadWriteLock读写锁的使用</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/myblog/2021/05/09/synchronized%E5%8E%9F%E7%90%86/" title="synchronized原理"><img src="https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png" alt="synchronized原理" onerror="this.onerror=null;this.src='/myblog/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2021-05-09T14:51:22.000Z" title="Created 2021-05-09 22:51:22">2021-05-09</time></div><a class="article-sort-item-title" href="/myblog/2021/05/09/synchronized%E5%8E%9F%E7%90%86/" title="synchronized原理">synchronized原理</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/myblog/2021/05/09/System-gc-%E5%92%8Cfinalize-%E7%9A%84%E4%BD%BF%E7%94%A8/" title="System.gc()和finalize()的使用"><img src="https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png" alt="System.gc()和finalize()的使用" onerror="this.onerror=null;this.src='/myblog/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2021-05-09T14:40:22.000Z" title="Created 2021-05-09 22:40:22">2021-05-09</time></div><a class="article-sort-item-title" href="/myblog/2021/05/09/System-gc-%E5%92%8Cfinalize-%E7%9A%84%E4%BD%BF%E7%94%A8/" title="System.gc()和finalize()的使用">System.gc()和finalize()的使用</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/myblog/2021/05/09/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/" title="动态代理"><img src="https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png" alt="动态代理" onerror="this.onerror=null;this.src='/myblog/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2021-05-08T21:26:13.000Z" title="Created 2021-05-09 05:26:13">2021-05-09</time></div><a class="article-sort-item-title" href="/myblog/2021/05/09/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/" title="动态代理">动态代理</a></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/myblog/img/blogger.png" onerror="this.onerror=null;this.src='/myblog/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Joyee</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/myblog/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a></div><div class="card-info-data-item is-center"><a href="/myblog/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Joyee111"><i class="fab fa-github"></i><span>订阅</span></a></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/myblog/2021/05/09/ReadWriteLock%E8%AF%BB%E5%86%99%E9%94%81%E7%9A%84%E4%BD%BF%E7%94%A8/" title="ReadWriteLock读写锁的使用"><img src="https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png" onerror="this.onerror=null;this.src='/myblog/img/404.jpg'" alt="ReadWriteLock读写锁的使用"/></a><div class="content"><a class="title" href="/myblog/2021/05/09/ReadWriteLock%E8%AF%BB%E5%86%99%E9%94%81%E7%9A%84%E4%BD%BF%E7%94%A8/" title="ReadWriteLock读写锁的使用">ReadWriteLock读写锁的使用</a><time datetime="2021-05-09T14:56:34.000Z" title="Created 2021-05-09 22:56:34">2021-05-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/myblog/2021/05/09/synchronized%E5%8E%9F%E7%90%86/" title="synchronized原理"><img src="https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png" onerror="this.onerror=null;this.src='/myblog/img/404.jpg'" alt="synchronized原理"/></a><div class="content"><a class="title" href="/myblog/2021/05/09/synchronized%E5%8E%9F%E7%90%86/" title="synchronized原理">synchronized原理</a><time datetime="2021-05-09T14:51:22.000Z" title="Created 2021-05-09 22:51:22">2021-05-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/myblog/2021/05/09/System-gc-%E5%92%8Cfinalize-%E7%9A%84%E4%BD%BF%E7%94%A8/" title="System.gc()和finalize()的使用"><img src="https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png" onerror="this.onerror=null;this.src='/myblog/img/404.jpg'" alt="System.gc()和finalize()的使用"/></a><div class="content"><a class="title" href="/myblog/2021/05/09/System-gc-%E5%92%8Cfinalize-%E7%9A%84%E4%BD%BF%E7%94%A8/" title="System.gc()和finalize()的使用">System.gc()和finalize()的使用</a><time datetime="2021-05-09T14:40:22.000Z" title="Created 2021-05-09 22:40:22">2021-05-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/myblog/2021/05/09/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/" title="动态代理"><img src="https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png" onerror="this.onerror=null;this.src='/myblog/img/404.jpg'" alt="动态代理"/></a><div class="content"><a class="title" href="/myblog/2021/05/09/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/" title="动态代理">动态代理</a><time datetime="2021-05-08T21:26:13.000Z" title="Created 2021-05-09 05:26:13">2021-05-09</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-bolt"></i><span>Newest Comments</span></div><div class="aside-list"><span>loading...</span></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/myblog/tags/JAVA/" style="font-size: 1.15em; color: rgb(168, 128, 165)">JAVA</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/myblog/archives/2021/05/"><span class="card-archive-list-date">May 2021</span><span class="card-archive-list-count">4</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">4</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-05-09T20:02:23.502Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://cdn.jsdelivr.net/gh/chmoe/ImgHosting@master/img/blog/IndexImg/72537757_p0.png')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Joyee</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/myblog/js/utils.js"></script><script src="/myblog/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[image]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[link]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[code]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const findTrueUrl = (array) => {
+    Promise.all(array.map(item =>
+      fetch(item.url).then(resp => resp.json()).then(data => {
+        const urlArray = data.body.match(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/ig)
+        if (data.user.login === 'utterances-bot') {
+          return urlArray.pop()
+        } else {
+          return urlArray.shift()
+        }
+      })
+    )).then(res => {
+        array = array.map((i,index)=> {
+          return {
+            ...i,
+            url: res[index]
+          }
+        })
+
+        saveToLocal.set('github-newest-comments', JSON.stringify(array), 10/(60*24))
+        generateHtml(array)
+    });
+  }
+
+  const getComment = () => {
+    fetch('https://api.github.com/repos//issues/comments?sort=updated&direction=desc&per_page=6&page=1',{
+      "headers": {
+        Accept: 'application/vnd.github.v3.html+json'
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        const githubArray = data.map(item => {
+          return {
+            'avatar': item.user.avatar_url,
+            'content': changeContent(item.body_html),
+            'nick': item.user.login,
+            'url': item.issue_url,
+            'date': item.updated_at,
+            'githubUrl': item.html_url
+          }
+        })
+        findTrueUrl(githubArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "Unable to get the data, please make sure the settings are correct."
+      })
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += 'No Comment'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('github-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);
-</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="I,LOVE,YOU" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="I,LOVE,YOU" data-fontsize="15px" data-random="false" async="async"></script><script>(function(d, w, c) {
+    w.ChatraID = 'JFxoMYQrkimxj6NKx';
+    var s = d.createElement('script');
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+    };
+    s.async = true;
+    s.src = 'https://call.chatra.io/chatra.js';
+    if (d.head) d.head.appendChild(s);
+})(document, window, 'Chatra');
+
+if (true) {
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      Chatra('openChat')
+    });
+  }
+  chatBtnFn()
+} else {
+  if (false) {
+    function chatBtnHide () {
+      Chatra('hide')
+    }
+    function chatBtnShow () {
+      Chatra('show')
+    }
+  }
+}</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
